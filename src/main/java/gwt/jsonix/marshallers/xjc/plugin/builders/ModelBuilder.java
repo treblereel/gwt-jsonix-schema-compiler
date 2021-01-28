@@ -164,7 +164,7 @@ public class ModelBuilder {
 
         jDefinedClass.annotate(toPopulate.ref(JsType.class))
                 .param("namespace", nameSpaceExpression)
-                .param("name", jsTypeName)
+                .param("name", "Object")
                 .param("isNative", true);
         String typeNameConstant = Stream.of(moduleName, parentClassName, nameSpace).filter(Objects::nonNull).collect(Collectors.joining("."));
 
